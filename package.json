@@ -1,27 +1,34 @@
 {
-  "name": "Woker_Bee",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ward438/Woker_Bee.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ward438/Woker_Bee/issues"
-  },
-  "homepage": "https://github.com/ward438/Woker_Bee#readme",
-  "dependencies": {
-    "express": "^4.17.1",
-    "jquery": "^3.6.0",
-    "mysql": "^2.18.1",
-    "mysql2": "^2.2.5",
-    "sequelize": "^6.6.2"
-  }
+    "name": "Woker_Bee",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "concurrently  \"node server.js\" \"node main.js\""
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ward438/Woker_Bee.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/ward438/Woker_Bee/issues"
+    },
+    "homepage": "https://github.com/ward438/Woker_Bee#readme",
+    "dependencies": {
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "jquery": "^3.6.0",
+        "mysql": "^2.18.1",
+        "mysql2": "^2.2.5",
+        "request": "^2.88.2",
+        "routes": "^2.1.0",
+        "sequelize": "^6.6.2"
+    },
+    "devDependencies": {
+        "concurrently": "^6.0.2"
+    }
 }
