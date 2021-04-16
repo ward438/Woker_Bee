@@ -1,6 +1,6 @@
 const request = require('request');
 const prompt = require('./prompt');;
-const INTERVAL = 2000;
+const INTERVAL = 1000;
 const URL = "http://localhost:3001"
 
 function checkForServer() {
