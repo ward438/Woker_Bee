@@ -1,17 +1,10 @@
 const router = require('express').Router();
 const healthCheckRoutes = require('./api/healthcheck');
 const employeesRouter = require('./api/employee');
+const departmentRouter = require('./api/department');
+
 router.use("/healthcheck", healthCheckRoutes);
 router.use("/employees", employeesRouter);
-
-// const apiRoutes = require('./api');
-// When prompting user for stuff, have it point to one of these urls to populate the data
-// REST API for the following things:
-// /employees - Create / Update / Delete / Read / List
-// Create - first_name, last_name        
-
-
-
-// router.use('/api', apiRoutes);
+router.use("/departments", departmentRouter);
 
 module.exports = router;
