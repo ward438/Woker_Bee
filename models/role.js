@@ -2,7 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 const Department = require('./department');
 
-class Role extends Model { }
+class Role extends Model {}
 
 
 Role.init({
@@ -19,7 +19,7 @@ Role.init({
         type: DataTypes.DECIMAL,
     },
     departmentId: {
-        type: DataTypes.STRING,
+        type: DataTypes.INTEGER,
         field: "department_id"
     },
 }, {
@@ -30,6 +30,6 @@ Role.init({
     modelName: 'role',
 });
 
-Role.hasOne(Department, { foreignKey: 'department_id' });
+Role.belongsTo(Department);
 
 module.exports = Role;

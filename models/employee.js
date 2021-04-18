@@ -2,7 +2,7 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 const Role = require('./role');
 
-class Employee extends Model { }
+class Employee extends Model {}
 
 
 Employee.init({
@@ -36,7 +36,7 @@ Employee.init({
     modelName: 'employee',
 });
 
-Employee.hasOne(Role, { foreignKey: 'role_id' });
-Employee.hasOne(Employee, { foreignKey: 'manager_id' });
+Employee.belongsTo(Role);
+Employee.belongsTo(Employee);
 
 module.exports = Employee;

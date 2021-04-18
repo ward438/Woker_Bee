@@ -1,0 +1,41 @@
+[{
+        "firstName": "Tim",
+        "lastName": "Robins",
+        "roleId": 2,
+        "managerId": 1
+    },
+
+    {
+
+        "firstName": "Super",
+        "lastName": "Coolio",
+        "roleId": 1,
+        "managerId": 1
+    },
+
+    {
+
+
+        "firstName": "James",
+        "lastName": "Cameron",
+        "roleId": 3,
+        "managerId": 2
+    },
+    {
+
+
+        "firstName": "John",
+        "lastName": "Lennon",
+        "roleId": 4,
+        "managerId": 3
+    },
+
+    {
+
+
+        "firstName": "Marty",
+        "lastName": "McFly",
+        "roleId": 5,
+        "managerId": 4
+    }
+]

@@ -1,0 +1,49 @@
+[{
+        "id": 1,
+        "title": "Level I",
+        "salary": 20000.00,
+        "departmentId": 1
+    },
+    {
+        "id": 2,
+        "title": "Level II",
+        "salary": 30000.00,
+        "departmentId": 1
+    },
+    {
+        "id": 3,
+        "title": "Level I",
+        "salary": 20000.00,
+        "departmentId": 2
+    },
+    {
+        "id": 4,
+        "title": "Level II",
+        "salary": 30000.00,
+        "departmentId": 2
+    },
+    {
+        "id": 5,
+        "title": "Level I",
+        "salary": 20000.00,
+        "departmentId": 3
+    },
+    {
+        "id": 6,
+        "title": "Level II",
+        "salary": 30000.00,
+        "departmentId": 3
+    },
+    {
+        "id": 7,
+        "title": "Level I",
+        "salary": 20000.00,
+        "departmentId": 4
+    },
+    {
+        "id": 8,
+        "title": "Level II",
+        "salary": 30000.00,
+        "departmentId": 4
+    }
+]

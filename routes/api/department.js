@@ -2,24 +2,19 @@ const Department = require('../../models/department');
 
 
 const router = require('express').Router();
-// let users =
-//     // let users = [{ "id": 5, "name": "alex" }, { "id": 4, "name": "robert" }];
-//     // Should create department
-//     router.post('/', async (req, res) => {
-//         res.status(200).json(users);
-//     });
+
 
 // Should return a list of all departments
-router.get('/', async (req, res) => {
+router.get('/', async(req, res) => {
     Department.findAll()
         .then((departments) => {
             res.status(200).json(departments);
-        }).catch(function (err) {
+        }).catch(function(err) {
             res.status(500).json({ "error": err });
         });
 });
 
-router.put('/:id', async (req, res) => {
+router.put('/:id', async(req, res) => {
     const { id } = req.params;
     Department.findOne({ where: { id: id } })
         .then((department) => {
@@ -33,7 +28,7 @@ router.put('/:id', async (req, res) => {
 })
 
 // Should return department w/ id of X
-router.get('/:id', async (req, res) => {
+router.get('/:id', async(req, res) => {
     // shorthand for const id = req.params.id;
     const { id } = req.params;
 
@@ -44,18 +39,20 @@ router.get('/:id', async (req, res) => {
             } else {
                 res.status(200).json(department);
             }
-        }).catch(function (err) {
+        }).catch(function(err) {
             res.status(500).json({ "error": err });
         });
 });
 
+
+
 // Should delete department w/ id of X
-router.delete('/:id', async (req, res) => {
+router.delete('/:id', async(req, res) => {
     res.status(200).json({ "status": "OK" });
 });
 
 // Should update department w/ id of X
-router.put('/:id', async (req, res) => {
+router.put('/:id', async(req, res) => {
     res.status(200).json({ "status": "OK" });
 });
 
