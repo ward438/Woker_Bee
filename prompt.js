@@ -32,20 +32,21 @@ module.exports.run = function() {
             switch (choice) {
                 case 'List employees':
                     return request.get({
-                        url: `${URL}/employees`,
-                        json: true
-                    }, (err, res, data) => {
-                        if (err) {
-                            console.log('Error:', err);
-                        } else if (res.statusCode !== 200) {
-                            console.log('Status:', res.statusCode);
-                        } else {
-                            // use the console.table instead here
-                            console.table(data);
-                            this.run();
-                        }
+                            url: `${URL}/employees`,
+                            json: true
+                        },
+                        (err, res, data) => {
+                            if (err) {
+                                console.log('Error:', err);
+                            } else if (res.statusCode !== 200) {
+                                console.log('Status:', res.statusCode);
+                            } else {
+                                // use the console.table instead here
+                                console.table(data);
+                                this.run();
+                            }
 
-                    });
+                        });
                 case 'List departments':
 
                     return request.get({
@@ -67,7 +68,7 @@ module.exports.run = function() {
                     return request.get({
                         url: `${URL}/roles`,
                         json: true
-                    }, (err, res, data) => {
+                    }, console.log("\nDepartment ID Legend \n1: Sales,2: Legal, 3: Engineering, 4: Finance \n"), (err, res, data) => {
                         if (err) {
                             console.log('Error:', err);
                         } else if (res.statusCode !== 200) {
